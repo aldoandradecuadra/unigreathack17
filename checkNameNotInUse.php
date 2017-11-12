@@ -39,10 +39,11 @@ if (!empty($row[0]))
 {
   $inUse = true;
   header("Location: start.php?inUse=$inUse");
+  echo "!!!";
 }
 else
 {
-  header("Location: audio.php?VRScene=$_POST['vr_scene']&VoiceType=$_POST['voice_type']");
+  //header("Location: audio.php?VRScene=$_POST['vr_scene']&VoiceType=$_POST['voice_type']");
 }
 
 //print_r($_POST);
