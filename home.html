@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
@@ -61,9 +61,7 @@ body, html {
     </a>
     <a href="#home" class="w3-bar-item w3-button">HOME</a>
     <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
-    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
-    <a href="start.php/" class="w3-bar-item w3-button">START</a>
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
       <i class="fa fa-search"></i>
     </a>
@@ -110,7 +108,7 @@ body, html {
   <div class=
     <:></div>
   </div>
-  <p class=><i class=></i></p>
+  <p class=><i class=></i>p</p>
   <div class=>
     <div class= style=</div>
   </div>
@@ -129,17 +127,25 @@ body, html {
   <h3 class="w3-center</h
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
+  <button class="w3-button w3-orange w3-center w3-section" type="button">
+          <i class="fa fa-plane"></i> 1. Pick your location:</button>
+		<div class="dropdown-content">
+			<a href="#">Blessful Beach</a>
+			<a href="#">Peaceful Forest</a>
+
+			</div>
+</div>
 </div>
 
-<div class="dropdown">
-	<button class="dropbtn">Dropdown</button>
-	<div class="dropdown-content">
-		<a href="#">Link 1</a>
-		<a href="#">Link 2</a>
-		<a href="#">Link 3</a>
-	</div>
-</div>
+	<div class="w3-row-padding w3-center">
+	<button class="w3-button w3-orange w3-center w3-section" type="button">
+          <i class="fa fa-plane"></i> 2. Pick your personalised trainer:</button>
+		<div class="dropdown-content">
+			<a href="#">Blessful Beach</a>
+			<a href="#">Peaceful Forest</a>
+		</div>
 
+</div>
 
 
 
@@ -212,37 +218,36 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
-// Change style of navbar on scroll.
+// Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
-function myFunction()
-{
-  var navbar = document.getElementById("myNavbar");
-  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100)
-  {
-    navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
-  }
-  else
-  {
-    navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
-  } /*End if*/
-} /*End myFunction*/
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
 
-// Toggles the menu on small screens when clicking on the menu button.
-function toggleFunction()
-{
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1)
-  {
-    x.className += " w3-show";
-  }
-  else
-  {
-    x.className = x.className.replace(" w3-show", "");
-  }/*End if*/
-} /*End toggleFunction*/
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
 </script>
-
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+
+
+
 
 </body>
 </html>
