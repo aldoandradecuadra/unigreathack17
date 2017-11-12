@@ -11,7 +11,7 @@ error_reporting(E_ALL);
 
 $servername = "localhost";
 $username = "hack17";
-$password = "!t0SA0W'Af613(~";
+$password = "RY3A%NFyZtYag*PV";
 $dbname = "hackdb";
 
 // Create connection
