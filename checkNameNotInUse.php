@@ -39,11 +39,14 @@ if (!empty($row[0]))
 {
   $inUse = true;
   header("Location: start.php?inUse=$inUse");
-  echo "!!!";
 }
 else
 {
-  //header("Location: audio.php?VRScene=$_POST['vr_scene']&VoiceType=$_POST['voice_type']");
+  $VRScene = $_POST['vr_scene'];
+  $VoiceType = $_POST['voice_type'];
+  $sqlUpdate = "INSERT INTO users(UserName, VRScene, VoiceType) VALUES('$name', '$VRScene', '$VoiceType');";
+  mysqli_query($conn, $sqlUpdate) or die("Q Error");
+  header("Location: audio.php?UserName=$name");
 }
 
 //print_r($_POST);

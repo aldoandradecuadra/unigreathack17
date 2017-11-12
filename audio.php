@@ -2,35 +2,59 @@
 <html>
 <head>
 <title>Freedom</title>
+<script src='https://code.responsivevoice.org/responsivevoice.js' type="text/javascript"></script>
+
+<style>
+input.button
+{
+  background-color: #D3D3D3;
+  color: black;
+  font-size: 20px;
+  border: 2px solid #D3D3D3;
+  border-radius: 4px;
+}
+</style>
 
 <?php
-echo "<script type='text/javascript'>var VRScene = $_GET['VRScene']; var VoiceType = $_GET['VoiceType'];</script>";
+$name = $_GET['UserName'];
+echo "<script type='text/javascript'> var name = " . $name . ";</script>";
 ?>
 
-<script>
-function getText()
-{
-  if (VRScene == 'Beautiful Beach')
-  {
-    var text = beautifulBeachText;
-  }
-  else if (VRScene == 'Fantastical Forest')
-  {
-    var text = fantasticalForestText;
-  }
-}
+<!--
+<div>
+  <object beautifulBeachText="resources/beautiful_beach.txt"></object>
+  <object fantasticalForestText="resources/fantastical_forest.txt"></object>
+</div>
+-->
 
-function startAudio()
-{
-  responsiveVoice.speak(text, voiceMale);
-}
+<script type="text/javascript">
+  function startAudio()
+  {
+    if (name == 'bb')
+    {
+      var text = "This is bb." // beautifulBeachText;
+    }
+    else if (name == 'ff')
+    {
+      var text = "This is ff." // fantasticalForestText;
+    }
+
+    responsiveVoice.speak("", "UK English Male");
+  }
+</script>
+
+<script type="text/javascript">
+startAudio();
 </script>
 
 </head>
 <body>
 <h1>Welcome to Freedom!</h1>
 
-getText();
-startAudio();
+<form action="quit.php" method="post">
+  <input type="hidden" name="UserName" value="<?= $name ?>" >
+  <input class="button" type="submit" name="quit" value="Quit">
+</form>
+
 </body>
 </html>

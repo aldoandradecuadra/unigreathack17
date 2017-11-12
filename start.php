@@ -12,6 +12,7 @@ input[type=text]
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+  background-color: #f8f8f8;
   border: none;
   border-bottom: 2px solid red;
 }
@@ -27,7 +28,7 @@ select
   padding: 16px 20px;
   border: none;
   border-radius: 4px;
-  background-color: #f1f1f1;
+  background-color: #D3D3D3;
 }
 
 form
@@ -35,6 +36,15 @@ form
   margin: auto;
   width: 50%;
   padding: 10px;
+}
+
+input.button
+{
+  background-color: #D3D3D3;
+  color: black;
+  font-size: 20px;
+  border: 2px solid #D3D3D3;
+  border-radius: 4px;
 }
 </style>
 
@@ -63,10 +73,11 @@ if ($_GET['inUse'])
    <label for="fname">Voice Type:</label>
   <br>
   <select id="voice_type" name="voice_type">
-    <option value="male">UK English Male</option>
-    <option value="female">UK English Female</option>
+    <option value="UK English Male">UK English Male</option>
+    <option value="UK English Female">UK English Female</option>
   </select>
-  <input type="submit" name="submit" value="Submit">
+  <br><br>
+  <input class="button" type="submit" name="submit" value="Submit">
 </form>
 
 </script>
